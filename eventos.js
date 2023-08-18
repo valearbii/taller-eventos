@@ -4,4 +4,7 @@ function clickbutton() {
 
 const button = document.getElementById('button');
 
-button.addEventListener('click', clickbutton());
+button.addEventListener('click', function(event) {
+    event.stopPropagation();
+    clickbutton();
+});
